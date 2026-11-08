@@ -23,19 +23,21 @@
             <h2>Get in Touch with Us</h2>
             <p>Have a question about catering or custom celebration cakes? Send us a message below!</p>
  
-            <!-- Complete HTML Form with Fieldset, Legend, and Validation -->
-            <form action="#" method="POST">
+            <!-- Form validated by JavaScript (script.js); novalidate lets the script run the checks -->
+            <form id="contact-form" action="#" method="POST" novalidate>
                 <fieldset>
                     <legend>Customer Information</legend>
  
                     <div>
                         <label for="fullname">Full Name:</label>
-                        <input type="text" id="fullname" name="fullname" required placeholder="Jane Doe">
+                        <input type="text" id="fullname" name="fullname" required placeholder="Jane Doe" aria-describedby="name-error">
+                        <span id="name-error" class="error-message" aria-live="polite"></span>
                     </div>
  
                     <div>
                         <label for="email">Email Address:</label>
-                        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                        <input type="email" id="email" name="email" required placeholder="jane@example.com" aria-describedby="email-error">
+                        <span id="email-error" class="error-message" aria-live="polite"></span>
                     </div>
  
                     <div>
@@ -46,7 +48,8 @@
                     <div>
                         <label for="message">Your Inquiry / Order Details:</label>
                         <br>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell us what you need..."></textarea>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us what you need..." aria-describedby="message-error"></textarea>
+                        <span id="message-error" class="error-message" aria-live="polite"></span>
                     </div>
                 </fieldset>
  
@@ -58,5 +61,7 @@
     <footer>
         <p>&copy; 2026 Crumb & Crust Bakery. All rights reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

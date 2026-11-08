@@ -21,3 +21,12 @@ Media sourced from Pexels (free to use):
 - croissant.jpg: Anna Shvets, photo 5964496
 - master-baker.jpg: Katerina Holmes, photo 5908170
 - baker-welcome video: Monserrat Soldu, video 2959290
+
+## Touchstone 4 Features
+- Product favorites (wishlist) on products.html: visitors save items with the "Add to Favorites" buttons, and the list is stored in the browser with localStorage so it persists across visits. A Clear Favorites button removes the saved data.
+- Quick Order Estimator on products.html: calculates an estimated pickup total from the product prices stored in the JavaScript product array.
+- JavaScript form validation on contact.html: checks that the name is entered, the email matches a valid format, and the inquiry is at least 10 characters, showing error messages beside each field and preventing invalid submissions.
+- All interactivity lives in the external file js/script.js, organized into functions (loadWishlist, saveToFavorites, validateName, validateEmail, validateMessage).
+
+## How to Run
+Open index.html in a web browser, or visit the live site: https://georgeabuga.github.io/crumb-crust-bakery/

@@ -28,6 +28,7 @@
                 <!-- Image 1 with meaningful alt text -->
                 <img src="images/sourdough.jpg" alt="A round crusty artisanal sourdough loaf sliced in half showing a soft airy crumb texture">
                 <p>Fermented for 36 hours for the perfect tangy flavor and golden crunchy crust ($7.50).</p>
+                <button type="button" class="save-favorite-btn" onclick="saveToFavorites(1)">❤️ Add to Favorites</button>
             </article>
  
             <article>
@@ -35,12 +36,41 @@
                 <!-- Image 2 with meaningful alt text -->
                 <img src="images/croissant.jpg" alt="Golden flaky French butter croissants resting on a baking tray">
                 <p>Made with authentic European cultured butter folded into dozens of delicate layers ($4.00).</p>
+                <button type="button" class="save-favorite-btn" onclick="saveToFavorites(2)">❤️ Add to Favorites</button>
             </article>
+        </section>
+
+        <!-- Interactive Calculator Section -->
+        <section id="calculator-section">
+            <h2>Quick Order Estimator</h2>
+            <p>Enter quantities to estimate the total for your pickup order:</p>
+            <div class="calc-row">
+                <label for="calc-sourdough">Sourdough Loaves ($7.50 each):</label>
+                <input type="number" id="calc-sourdough" class="calc-input" min="0" value="0">
+            </div>
+            <div class="calc-row">
+                <label for="calc-croissant">Butter Croissants ($4.00 each):</label>
+                <input type="number" id="calc-croissant" class="calc-input" min="0" value="0">
+            </div>
+            <button type="button" id="calculate-btn" class="btn-interactive">Calculate Total</button>
+            <p id="calc-result"></p>
+        </section>
+
+        <!-- Saved Favorites Wishlist Section (localStorage) -->
+        <section id="wishlist-container">
+            <h2>Your Saved Favorite Items</h2>
+            <p>Your favorites are saved in your browser and will still be here when you come back:</p>
+            <ul id="wishlist-list">
+                <!-- Populated by JavaScript from localStorage -->
+            </ul>
+            <button type="button" id="clear-wishlist" class="btn-interactive">Clear Favorites</button>
         </section>
     </main>
  
     <footer>
         <p>&copy; 2026 Crumb & Crust Bakery. All rights reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
