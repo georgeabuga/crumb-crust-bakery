@@ -14,3 +14,10 @@ Media files to add (exact names/paths the pages reference):
 - images/master-baker.jpg
 - media/baker-welcome.mp4
 - media/baker-welcome.webm
+
+Media sourced from Pexels (free to use):
+- hero images: freestocks.org, photo 1383908
+- sourdough.jpg: adrian vieriu, photo 11646507
+- croissant.jpg: Anna Shvets, photo 5964496
+- master-baker.jpg: Katerina Holmes, photo 5908170
+- baker-welcome video: Monserrat Soldu, video 2959290
