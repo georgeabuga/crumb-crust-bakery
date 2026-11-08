@@ -254,3 +254,70 @@ footer {
     width: auto;
   }
 }
+
+/* ==========================================================================
+   TOUCHSTONE 4: INTERACTIVITY, VALIDATION & STORAGE
+   ========================================================================== */
+
+/* Interactive buttons (favorites, calculator, clear) */
+.btn-interactive, .save-favorite-btn {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-interactive:hover, .save-favorite-btn:hover {
+  background-color: var(--color-brown);
+}
+
+/* Calculator rows and result */
+.calc-row {
+  margin-bottom: 1rem;
+}
+
+.calc-input {
+  width: 90px;
+  padding: 0.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  background-color: var(--color-cream);
+}
+
+#calc-result {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Saved favorites list */
+#wishlist-list {
+  list-style: disc;
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+/* Form validation feedback (error red / success green are state colors,
+   separate from the brand palette) */
+.error-message {
+  color: #B3261E;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.25rem;
+  min-height: 1em;
+}
+
+input.error, textarea.error {
+  border: 2px solid #B3261E;
+}
+
+input.success, textarea.success {
+  border: 2px solid #2E7D32;
+}
