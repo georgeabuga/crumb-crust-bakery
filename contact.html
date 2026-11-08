@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crumb & Crust Bakery - Contact Us</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact & Custom Orders</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section>
+            <h2>Get in Touch with Us</h2>
+            <p>Have a question about catering or custom celebration cakes? Send us a message below!</p>
+ 
+            <!-- Complete HTML Form with Fieldset, Legend, and Validation -->
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Customer Information</legend>
+ 
+                    <div>
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" required placeholder="Jane Doe">
+                    </div>
+ 
+                    <div>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                    </div>
+ 
+                    <div>
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+ 
+                    <div>
+                        <label for="message">Your Inquiry / Order Details:</label>
+                        <br>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us what you need..."></textarea>
+                    </div>
+                </fieldset>
+ 
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 Crumb & Crust Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

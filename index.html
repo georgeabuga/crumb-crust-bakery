@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crumb & Crust Bakery - Home</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Crumb & Crust Bakery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section>
+            <h2>Welcome to Artisanal Baking at its Finest</h2>
+            <p>We craft hand-kneaded sourdoughs, flaky croissants, and decadent pastries daily using locally sourced organic ingredients.</p>
+ 
+            <!-- Responsive Image Requirement -->
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-large.jpg">
+                <img src="images/hero-small.jpg" alt="Freshly baked artisanal sourdough loaves arranged on a wooden bakery counter">
+            </picture>
+        </section>
+ 
+        <section>
+            <h2>Hear From Our Master Baker</h2>
+            <!-- Audio/Video Requirement with Fallback Text -->
+            <video controls width="400">
+                <source src="media/baker-welcome.mp4" type="video/mp4">
+                <source src="media/baker-welcome.webm" type="video/webm">
+                Your browser does not support the video element. <a href="media/baker-welcome.mp4">Download the welcome video</a>.
+            </video>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>&copy; 2026 Crumb & Crust Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>

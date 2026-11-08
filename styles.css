@@ -1,0 +1,256 @@
+/* ==========================================================================
+   CRUMB & CRUST BAKERY - SHARED STYLESHEET (styles.css)
+   Author: George Abuga Mokaya
+   Client: Client A (Products-Focused Bakery)
+   Refined: product layout and submit button now use CSS classes
+   (.product-grid and .submit-btn); desktop flex rule scoped to the
+   products page only.
+   ========================================================================== */
+
+/* --- Design Tokens & Color Palette (4 Colors Max, 2 Fonts Max) --- */
+:root {
+  /* Color Palette */
+  --color-cream: #FAF6F0;       /* Light Warm Background */
+  --color-brown: #4A2E1B;       /* Deep Warm Brown (Headings, Primary Text) */
+  --color-terracotta: #D97736;  /* Warm Accent (Buttons, Highlights, Links) */
+  --color-white: #FFFFFF;       /* Card & Form Container Background */
+  --color-border: #E5D5C5;      /* Subtle Warm Border */
+
+  /* Typography */
+  --font-serif: Georgia, serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing */
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+}
+
+/* --- Global Reset & Base Layout --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-brown);
+  background-color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-sm);
+}
+
+/* --- Typography Hierarchy --- */
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--color-brown);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 1rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-terracotta);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+  color: var(--color-brown);
+  text-decoration: underline;
+}
+
+/* --- Navigation & Header --- */
+header {
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-border);
+  padding: var(--space-md) var(--space-sm);
+  text-align: center;
+}
+
+nav {
+  margin-top: 0.75rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+
+nav a {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+}
+
+nav a:hover, nav a:focus {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+/* --- Content Sections & Cards --- */
+section, article {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  box-shadow: 0 2px 4px rgba(74, 46, 27, 0.04);
+}
+
+/* --- Media Styling --- */
+img, video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+figure {
+  background-color: var(--color-cream);
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-brown);
+  margin-top: 0.5rem;
+}
+
+/* --- Form Design --- */
+form {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--space-md);
+}
+
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: var(--space-md);
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-family: var(--font-serif);
+  font-weight: bold;
+  color: var(--color-terracotta);
+  padding: 0 0.5rem;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  background-color: var(--color-cream);
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--color-terracotta);
+  background-color: var(--color-white);
+}
+
+/* Submit button: styled through the .submit-btn class.
+   Add class="submit-btn" to the submit button in contact.html. */
+.submit-btn {
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-brown);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  text-align: center;
+  padding: var(--space-md);
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT ADJUSTMENTS (Desktop Viewports)
+   ========================================================================== */
+
+@media (min-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 1.75rem; }
+
+  /* Flexbox two-column layout for the Products page only.
+     Add class="product-grid" to the products <section> in products.html.
+     Other pages keep their normal stacked layout on desktop. */
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  .product-grid > h2, .product-grid > p {
+    flex: 1 1 100%;
+  }
+
+  .product-grid article {
+    flex: 1 1 calc(50% - var(--space-md));
+    margin-bottom: 0;
+  }
+
+  .submit-btn {
+    width: auto;
+  }
+}
