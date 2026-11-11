@@ -1,4 +1,4 @@
-# Crumb & Crust Bakery
+# North Star Bakery
 
 Four-page bakery website built for Sophia Introduction to Web Development
 (Touchstone Task 2 structure, Touchstone 3 visual design).
