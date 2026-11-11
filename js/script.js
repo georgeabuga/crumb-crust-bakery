@@ -1,5 +1,5 @@
 /* ==========================================================================
-   CRUMB & CRUST BAKERY - INTERACTIVITY & CLIENT-SIDE DATA (script.js)
+   NORTH STAR BAKERY - INTERACTIVITY & CLIENT-SIDE DATA (script.js)
    Touchstone 4: product favorites saved with localStorage, a custom
    order calculator, and JavaScript form validation.
    ========================================================================== */
